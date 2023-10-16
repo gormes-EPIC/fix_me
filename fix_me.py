@@ -50,38 +50,41 @@ def take_move(game, player):
     if game[x][z] == 0:
         game[x][z] = player
         return game
-    else: 
+    else:
         print("Try Again Player " + str(player))
-        take_move(game, player)    
+        take_move(game, player)
 
 # Run a TIc Tac Toe game
-def main():
-    # Start with an empty game board and player 1
-    game = [[0, 0, 0],
-	[0, 0, 0],
-	[0, 0, 0]]
+try:
+    def main():
+        # Start with an empty game board and player 1
+        game = [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]
 
-    player = 1
-    player2 = 2
+        player = 1
+        player2 = 2
 
-    # Until someone wins, take moves and 
-    while True:
-        board(game)
-        take_move(game,1)
-        print()
+        # Until someone wins, take moves and
+        while True:
+            board(game)
+            take_move(game,1)
+            print()
 
-        win1 = is_winner(game)
-        if win1 == "1":
-            print("player 1 won")
-            quit()
-        board(game)
-        take_move(game, 2)
-        print()
+            win1 = is_winner(game)
+            if win1 == "1":
+                print("player 1 won")
+                quit()
+            board(game)
+            take_move(game, 2)
+            print()
 
-        win1 = is_winner(game)
-        if win1 == "2":
-            print("player 2 won")
-            quit()
+            win1 = is_winner(game)
+            if win1 == "2":
+                print("player 2 won")
+                quit()
+except ValueError:
+    main()
 
 
 
