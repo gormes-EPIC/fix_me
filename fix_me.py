@@ -62,14 +62,27 @@ def main():
 	[0, 0, 0]]
 
     player = 1
+    player2 = 2
 
     # Until someone wins, take moves and 
-    while is_winner(game):
-        game = take_move(game, player)
+    while True:
         board(game)
+        take_move(game,1)
         print()
 
-    print("Player " + str(is_winner(game)) + " wins!")
+        win1 = is_winner(game)
+        if win1 == "1":
+            print("player 1 won")
+            quit()
+        board(game)
+        take_move(game, 2)
+        print()
+
+        win1 = is_winner(game)
+        if win1 == "2":
+            print("player 2 won")
+            quit()
+
 
 
 main()
