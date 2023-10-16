@@ -23,6 +23,16 @@ def is_winner(game):
                 print("Player 2")
                 return "2"
 
+        if game[0][0] == game[1][1] == game[2][2] or game[0][2] == game[1][1] == game[2][0] and game[1][1] != 0:
+            print("Dia")
+            if game[1][1] == 1:
+                print("Player 1")
+                return "1"
+
+            else:
+                print("Player 2")
+                return "2"
+
 
     # If no one wins return 0
     return 0
