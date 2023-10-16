@@ -35,6 +35,9 @@ You can also install the [GitHub Pull Requests and Issues Extension](https://mar
 - Fix the issues in the code
 - Create a new branch with your name and push your complete code back to my repository. When you get to this step, let me know so I can add you as a collaborator on the project.
 
+- Create a new branch with your name and push your complete code back to my repository. When you are ready for this step, let me know so I can add you as a collaborator on the project.
+
+
 ## Part 5: Update your GitHub Profile
 - Add a professional photo, change your name, add your LinkedIn URL etc. to your GitHub profile. Assume that this profile will be listed on your resume in the future so make sure it is professional!
 
