@@ -12,6 +12,15 @@ def is_winner(game):
             if game[0][i] == 1:
                 return 1
             return 2
+        # check diagonals
+    if (game[0][0] == game[1][1] == game[2][2] and game[0][0] != 0):
+        if game[0][0] == 1:
+            return 1
+        return 2
+    if (game[0][2] == game[1][1] == game[2][0] and game[2][0] != 0):
+        if game[0][2] == 1:
+            return 1
+        return 2
         
     # If no one wins return 0
     return 0
@@ -50,12 +59,15 @@ def main():
     player = 1
 
     # Until someone wins, take moves and 
-    while is_winner(game):
+    
+    while True:
         game = take_move(game, player)
         board(game)
         print()
-
-    print("Player " + str(is_winner(game)) + " wins!")
+        win = is_winner(game)
+        if win == 1 or win == 2:
+            break
+    print("Player " + str(win) + " wins!")
 
 
 main()
